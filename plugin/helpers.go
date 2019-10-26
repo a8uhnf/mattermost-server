@@ -37,6 +37,9 @@ type Helpers interface {
 	//
 	// Minimum server version: 5.6
 	KVSetWithExpiryJSON(key string, value interface{}, expireInSeconds int64) error
+
+	// KVListPrefix retrieves list of value with prefix
+	KVListPrefix(prefix string, page, perPage int) ([]string, error)
 }
 
 type HelpersImpl struct {

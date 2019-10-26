@@ -103,3 +103,7 @@ func (p *HelpersImpl) KVSetWithExpiryJSON(key string, value interface{}, expireI
 
 	return nil
 }
+
+func (p *HelpersImpl) KVListPrefix(prefix string, page, perPage int) ([]string, error) {
+	return []string{}, nil
+}
